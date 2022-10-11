@@ -1,0 +1,13 @@
+.container {
+    width: 100%;
+    max-width: 70%;
+    margin-inline: auto;
+
+    @include tablet {
+        max-width: 90%;
+    }
+
+    @include mobile {
+        max-width: 90%;
+    }
+}

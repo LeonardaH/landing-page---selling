@@ -1,0 +1,32 @@
+
+button{
+    padding: 12px 28px;
+    border: 2px solid;
+
+    a{
+        font-weight: $bold;
+        text-transform: $uppercase;
+        font-size: $xxsSize;
+    }
+}
+
+.button-products{
+    padding: 6px 20px;
+    margin-left: $xsSpacing;
+}
+
+.btn-transparent{
+    @include btn-variant($whiteColor, transparent, $whiteColor);
+}
+
+.btn-white{
+    @include btn-variant($blackColor, $whiteColor, $whiteColor);
+}
+
+.btn-black{
+    @include btn-variant($whiteColor, $blackColor, $blackColor);
+}
+
+.btn-transp-black{
+    @include btn-variant($blackColor, transparent, $blackColor);
+}

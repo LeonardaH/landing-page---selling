@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+}
+
+a{
+    text-decoration: none;
+    color: $blackColor
+}
+
+li{
+    list-style: none;
+}
+
+.selected{
+    color: $orangeColor;
+}
+
+.centered{
+    margin: 0 auto;
+}
+
+.centered-text{
+    text-align: $center;
+}
+
+.section-spacing{
+    padding: $sectionSpacing 0;
+}
+
+h2{
+    font-size: $largeSize;
+    font-weight: 900;
+    padding-top: $xsSpacing;
+
+    @include tablet{
+        font-size: $smallSize;
+    }
+
+    @include mobile{
+        font-size: $mediumSize;
+    }
+}
+
+// subtitle for products and feature section
+
+.subtitle {
+    max-width: 500px;
+    text-align: $center;
+    @include tablet{
+        max-width: 300px;
+    }
+
+    span {
+        text-transform: $uppercase;
+        letter-spacing: 2px;
+    }
+
+    p {
+        padding-top: $xsSpacing;
+    }
+}
+
+p{
+    color: $grayColor;
+    line-height: 1.5;
+
+    @include tablet{
+        font-size: 12px;
+    }
+}
+
+span{
+    color: $grayColor;
+
+    @include tablet{
+        font-size: $xxsSize;
+    }
+}
+
+// social icons 
+
+.social{
+    @include flexbox(center);
+    gap: 4px;
+        img{
+            width: 10px;
+            height: 10px;
+        }
+
+        a {
+            background-color: $blackColor;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            @include flexbox(center);
+        }
+
+}
+
+input, textarea{
+    border: 1px solid $borderGray;
+    width: 100%;
+    margin-top: $xsSpacing;
+}
+
+input{
+    padding: 8px 0;
+}
+
+.show{
+    display: block!important;
+}
+

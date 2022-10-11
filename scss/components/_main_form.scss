@@ -1,0 +1,55 @@
+.main__form {
+    background-color: $backgroundColor;
+
+    @include mobile {
+        padding-top: $smallSpacing;
+    }
+
+    &__wrapper__contact {
+        max-width: 500px;
+        background-color: $whiteColor;
+        padding: 20px;
+        margin-top: $mediumSpacing;
+
+        @include tablet {
+            max-width: 300px;
+        }
+
+        @include mobile {
+            max-width: 100%;
+            padding: $mediumSpacing;
+        }
+
+        h3 {
+            font-weight: 400;
+            padding-bottom: $smallSpacing;
+        }
+
+        .form {
+            padding-top: $smallSpacing;
+            font-size: 14px;
+
+            &__holder {
+                @include flexbox(space-between);
+                gap: 20px;
+
+                &__group {
+                    flex-basis: 50%;
+                }
+            }
+
+            &__group {
+                margin-top: $smallSpacing;
+            }
+
+            button {
+                margin-top: $smallSpacing;
+            }
+
+            #message {
+                padding: $xsSpacing;
+                color: $grayColor;
+            }
+        }
+    }
+}

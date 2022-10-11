@@ -1,0 +1,137 @@
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $whiteColor;
+    z-index: 999;
+
+    // header top
+
+    &__top {
+        background-color: $backgroundColor;
+        position: relative;
+    
+        &__wrapper {
+            @include flexbox;
+            height: 40px;
+    
+            &__contact {
+                @include flexbox;
+                gap: $smallSpacing;
+
+                div{
+                    @include flexbox;
+                }
+    
+                img {
+                    width: 12px;
+                    height: 12px;
+                }
+
+                span {
+                    font-size: 14px;
+                    padding-left: 4px;
+                    color: $blackColor;
+
+                    @include mobile{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    // header bottom
+
+    &__bottom{
+        @include flexbox;
+        height: $sectionSpacing;
+        background-color: $whiteColor;
+        
+        &__logo{
+            a{
+                font-weight: $bold;
+                font-size: $largeSize;
+
+                @include mobile{
+                    font-size: $mediumSize;
+                }
+
+                span{
+                    height: 8px;
+                    width: 8px;
+                    margin-right: 4px;
+                    background-color: $orangeColor;
+                    display: inline-block;
+                }
+            }
+        }
+
+        &__nav{ 
+            
+            @include tablet{
+                display: none;
+            }
+
+            @include mobile{
+                display: none
+            }
+
+            ul{
+                @include flexbox;
+                gap: 30px;
+
+                a:hover{
+                    color: $orangeColor;
+                }
+            }
+        }
+        
+        &__menu{
+            display: none;
+
+            @include tablet{
+                display: block;
+                width: 16px;
+                height: 12px;
+            }
+
+            @include mobile{
+                display: block;
+                width: 16px;
+                height: 12px;
+            }
+        }
+    }
+
+    // header mobile
+
+    .header__mobile{
+        display: none;
+
+        @include tablet{
+            display: none;
+            background-color: $whiteColor;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            padding: 20px 10px;
+            
+            li{
+                padding-top: 10px;
+            }
+            
+            &__close{
+                
+                img{
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    right: 10px;
+                    top: 20px;
+                }
+            }
+        }
+    }
+
+}

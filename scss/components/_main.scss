@@ -1,0 +1,65 @@
+main{
+    position: relative;
+    top: 100px;
+
+    // main landing
+    .main__landing{
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(/assets/other/hero.jpg);
+        width: 100%;
+        max-width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
+        @include flexbox;
+
+        @include tablet{
+            height: 400px;
+        }
+
+        @include mobile{
+            background-position: top center;
+        }
+
+        &__description{
+            padding: 10% 44% 0 0;
+
+            @include mobile{
+                padding: 10% 0 0 0;
+            }
+
+            h1 {
+                color: $whiteColor;
+                font-weight: $bold;
+                font-size: $xlSize;
+                padding-bottom: $xsSpacing;
+
+                @include tablet{
+                    font-size: $mediumSize;
+                }
+            }
+
+            p{
+                color: $whiteColor;
+                padding-bottom: $mediumSpacing;
+            }
+
+            &__buttons{
+                @include tablet{
+                    .btn-white {
+                        display: inherit;
+                    }
+                }
+                @include mobile{
+                    button {
+                        width: 100%;
+                    }
+                }
+
+                .btn-white {
+                    margin-top: $xsSpacing;
+                }
+            }
+
+        }
+    }
+}

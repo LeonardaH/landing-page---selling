@@ -1,0 +1,53 @@
+.main__testimonials {
+    border-top: 1px solid $borderGray;
+
+    @include mobile {
+        padding-top: $smallSpacing;
+        padding-bottom: 0;
+    }
+
+    &__wrapper__content {
+        max-width: 700px;
+
+        img {
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            display: block;
+            margin-bottom: $smallSpacing;
+        }
+
+        q {
+            font-size: $mediumSize;
+            line-height: 1.5;
+            color: $grayColor;
+
+            @include tablet {
+                font-size: $xsSize;
+            }
+
+            @include mobile {
+                font-size: $smallSize;
+            }
+        }
+
+        p {
+            color: $blackColor;
+            font-weight: 700;
+            padding: $smallSpacing 0;
+        }
+
+        .dots {
+            height: 8px;
+            width: 8px;
+            margin-right: 4px;
+            background-color: $lightGray;
+            border-radius: 50%;
+            display: inline-block;
+
+            &.selected {
+                background-color: $orangeColor;
+            }
+        }
+    }
+}
